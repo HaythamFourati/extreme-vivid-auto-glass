@@ -1,0 +1,27 @@
+{
+	"name": "extreme-vivid-auto-glass",
+	"version": "1.0.0",
+	"private": true,
+	"description": "WordPress theme — Extreme Vivid Auto Glass. Tailwind v4 CLI + @wordpress/scripts + BrowserSync.",
+	"author": "Local Vocal Marketing",
+	"license": "UNLICENSED",
+	"scripts": {
+		"start": "wp-scripts start",
+		"wpstart": "wp-scripts start",
+		"build:js": "wp-scripts build",
+		"build:css": "tailwindcss -i ./src/index.css -o ./build/index.css --minify",
+		"tailwindwatch": "tailwindcss -i ./src/index.css -o ./build/index.css --watch",
+		"sync": "browser-sync start --proxy 'extreme-vivid-auto-glass.local' --files '**/*.php' 'build/*.js' 'build/*.css' --no-notify --no-open",
+		"preview": "npm-run-all --parallel sync wpstart tailwindwatch",
+		"build": "npm-run-all --sequential build:css build:js",
+		"lint:js": "wp-scripts lint-js src",
+		"format": "wp-scripts format src"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.0.0",
+		"@wordpress/scripts": "^30.0.0",
+		"browser-sync": "^3.0.3",
+		"npm-run-all": "^4.1.5",
+		"tailwindcss": "^4.0.0"
+	}
+}

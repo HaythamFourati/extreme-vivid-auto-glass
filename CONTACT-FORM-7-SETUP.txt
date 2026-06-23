@@ -1,0 +1,213 @@
+EXTREME VIVID AUTO GLASS — CONTACT FORM 7 SETUP
+================================================
+
+Tested against Contact Form 7 6.1.6.
+
+IMPORTANT
+---------
+Contact Form 7 still sends through WordPress mail. If WordPress email is not
+configured correctly, changing form plugins will not fix delivery by itself.
+Configure a transactional SMTP/mail provider, then send a test from that
+provider before testing this form.
+
+
+1. CREATE THE FORM
+------------------
+
+In WordPress, go to:
+Contact → Add New
+
+Use this exact title:
+Auto Glass Quote
+
+The theme looks up the form by that exact title, so no shortcode ID needs to be
+added to the theme. The theme also disables Contact Form 7's automatic paragraph
+formatting for this title so the field grids and contact buttons render correctly.
+
+
+2. FORM TAB
+-----------
+
+Replace everything in the Form tab with:
+
+<div class="evag-form-grid evag-form-grid--vehicle">
+	<label class="evag-form-field">
+		<span class="evag-form-label">Vehicle year *</span>
+		[text* year class:evag-form-control autocomplete:off placeholder "2019"]
+	</label>
+	<label class="evag-form-field">
+		<span class="evag-form-label">Make *</span>
+		[text* make class:evag-form-control autocomplete:off placeholder "Toyota"]
+	</label>
+	<label class="evag-form-field">
+		<span class="evag-form-label">Model *</span>
+		[text* model class:evag-form-control autocomplete:off placeholder "Camry"]
+	</label>
+</div>
+
+<div class="evag-form-grid evag-form-grid--two">
+	<label class="evag-form-field">
+		<span class="evag-form-label">VIN <span class="evag-form-label-note">(speeds up glass matching)</span></span>
+		[text vin class:evag-form-control autocomplete:off placeholder "Optional but helpful"]
+	</label>
+	<label class="evag-form-field">
+		<span class="evag-form-label">Damaged glass *</span>
+		[select* glass class:evag-form-control class:evag-glass-select first_as_label "Select glass type…" "Front windshield" "Driver / passenger door glass" "Rear door glass" "Quarter / vent glass" "Back glass" "Stone chip" "Leak" "ADAS windshield"]
+	</label>
+</div>
+
+<div class="evag-form-divider" aria-hidden="true"></div>
+
+<div class="evag-form-grid evag-form-grid--two">
+	<label class="evag-form-field">
+		<span class="evag-form-label">Full name *</span>
+		[text* name class:evag-form-control autocomplete:name placeholder "Jane Driver"]
+	</label>
+	<label class="evag-form-field">
+		<span class="evag-form-label">Phone *</span>
+		[tel* phone class:evag-form-control autocomplete:tel placeholder "(410) 555-0000"]
+	</label>
+</div>
+
+<div class="evag-form-grid evag-form-grid--two">
+	<label class="evag-form-field">
+		<span class="evag-form-label">Email</span>
+		[email email class:evag-form-control autocomplete:email placeholder "you@email.com"]
+	</label>
+	<label class="evag-form-field">
+		<span class="evag-form-label">ZIP code *</span>
+		[text* zip class:evag-form-control autocomplete:postal-code placeholder "21136"]
+	</label>
+</div>
+
+<div class="evag-contact-picker">
+	<span class="evag-form-label">Preferred contact method</span>
+	[hidden contact "both"]
+	<div class="evag-contact-picker-options">
+		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="email" aria-pressed="false">
+			<span class="evag-contact-active-frame" data-active-frame hidden></span>
+			Email
+		</button>
+		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="phone" aria-pressed="false">
+			<span class="evag-contact-active-frame" data-active-frame hidden></span>
+			Phone
+		</button>
+		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="both" aria-pressed="true">
+			<span class="evag-contact-active-frame" data-active-frame></span>
+			Both
+		</button>
+	</div>
+</div>
+
+[submit class:evag-quote-submit "Get my auto glass quote →"]
+
+<a class="evag-form-call" href="tel:+14109004600">Prefer to talk? Call <strong>(410) 900-4600</strong></a>
+
+
+3. MAIL TAB
+-----------
+
+Replace REPLACE-WITH-YOUR-EMAIL@example.com with the real inbox that should
+receive quote requests.
+
+To:
+REPLACE-WITH-YOUR-EMAIL@example.com
+
+From:
+[_site_title] <wordpress@[_site_domain]>
+
+Subject:
+Quote request — [year] [make] [model]
+
+Additional headers:
+
+Leave blank. Email is optional in this form, so using it as a Reply-To header can
+produce an invalid empty header. The submitted email is included in the message.
+
+Message body:
+New quote request from the website.
+
+Vehicle: [year] [make] [model]
+VIN: [vin]
+Glass: [glass]
+
+Name: [name]
+Phone: [phone]
+Email: [email]
+ZIP: [zip]
+Preferred contact method: [contact]
+
+Page: [_url]
+Submitted: [_date] at [_time]
+IP address: [_remote_ip]
+
+Exclude lines with blank mail-tags from output:
+Checked
+
+Use HTML content type:
+Unchecked
+
+File attachments:
+Leave blank
+
+Mail (2):
+Disabled
+
+
+4. MESSAGES TAB
+---------------
+
+Use these values:
+
+Sender's message was sent successfully:
+Your quote request was sent. We’ll confirm availability and pricing shortly.
+
+Sender's message failed to send:
+We couldn’t send your request. Please call (410) 900-4600.
+
+Validation errors occurred:
+Please check the highlighted fields and try again.
+
+Submission was referred to as spam:
+We couldn’t send your request. Please call (410) 900-4600.
+
+There are terms that the sender must accept:
+Please accept the required terms before sending.
+
+There is a field that the sender must fill in:
+Please complete this required field.
+
+There is a field with input that is longer than the maximum allowed length:
+This entry is too long.
+
+There is a field with input that is shorter than the minimum allowed length:
+This entry is too short.
+
+The remaining message fields can keep their Contact Form 7 defaults because this
+form does not use uploads, dates, numbers, quizzes, URLs or acceptance fields.
+
+
+5. ADDITIONAL SETTINGS TAB
+--------------------------
+
+Leave this tab blank.
+
+
+6. SAVE AND TEST
+----------------
+
+1. Save the Contact Form 7 form.
+2. Confirm the title is exactly: Auto Glass Quote
+3. Clear any page/cache plugin cache.
+4. Open the homepage and submit a real test.
+5. Confirm both:
+   - The website shows the custom success panel.
+   - The message arrives in the To inbox.
+
+If the website says the message could not be sent, or no email arrives, configure
+SMTP/transactional email for WordPress and test the mail connection. Contact Form
+7 does not provide an email delivery service.
+
+Optional but recommended:
+Install Flamingo if you want Contact Form 7 submissions stored in WordPress as a
+backup. Contact Form 7 itself does not save submissions.

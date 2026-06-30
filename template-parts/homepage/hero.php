@@ -36,7 +36,7 @@ $evag = evag_config();
 				);
 				foreach ( $chips as $chip ) :
 					?>
-					<span style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#D4D8DD;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.14);border-radius:3px;padding:8px 13px"><span aria-hidden="true" style="width:5px;height:5px;border-radius:50%;background:#5FB1D4;flex:none"></span><?php echo esc_html( $chip ); ?></span>
+					<span style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.03em;color:#F4F6F8;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);border-radius:3px;padding:9px 14px"><span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:#5FB1D4;flex:none;box-shadow:0 0 6px rgba(95,177,212,.5)"></span><?php echo esc_html( $chip ); ?></span>
 				<?php endforeach; ?>
 			</div>
 

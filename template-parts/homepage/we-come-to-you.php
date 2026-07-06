@@ -32,7 +32,7 @@ $evag = evag_config();
 			</div>
 		</div>
 		<div data-reveal style="--reveal-delay:140ms;min-width:0;position:relative;border-radius:4px;overflow:hidden;clip-path:polygon(0 0,100% 0,94% 100%,0 100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)">
-			<img src="<?php echo esc_url( $evag['van_image'] ); ?>" alt="<?php esc_attr_e( 'Extreme Vivid Auto Glass van arriving for mobile service', 'evag' ); ?>" loading="lazy" decoding="async" width="1024" height="514" style="width:100%;height:clamp(300px,30vw,420px);object-fit:cover;display:block">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/pictures/right-side.jpg' ); ?>" alt="<?php esc_attr_e( 'Extreme Vivid Auto Glass van arriving for mobile service', 'evag' ); ?>" loading="lazy" decoding="async" width="1024" height="514" style="width:100%;height:clamp(300px,30vw,420px);object-fit:cover;display:block">
 			<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,13,15,0) 55%,rgba(12,13,15,.5))"></div>
 		</div>
 	</div>

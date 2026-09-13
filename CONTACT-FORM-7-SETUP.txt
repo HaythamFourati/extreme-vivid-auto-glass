@@ -28,7 +28,15 @@ formatting for this title so the field grids and contact buttons render correctl
 2. FORM TAB
 -----------
 
-Replace everything in the Form tab with:
+Replace everything in the Form tab with the block below — paste it exactly as
+written, with no additions.
+
+Note that the "Damaged glass" dropdown declares no options. The theme fills them
+in from its glass_options list (inc/site-config.php), because the homepage
+"What glass is damaged?" tiles pre-select this dropdown by exact value and the
+two lists have to agree character for character. To add, rename or reorder a
+glass option, edit glass_options — not this form. Anything you type into the
+select tag here besides the placeholder is discarded.
 
 <div class="evag-form-grid evag-form-grid--vehicle">
 	<label class="evag-form-field">
@@ -52,7 +60,7 @@ Replace everything in the Form tab with:
 	</label>
 	<label class="evag-form-field">
 		<span class="evag-form-label">Damaged glass *</span>
-		[select* glass class:evag-form-control class:evag-glass-select first_as_label "Select glass type…" "Front windshield" "Driver / passenger door glass" "Rear door glass" "Quarter / vent glass" "Back glass" "Stone chip" "Leak" "ADAS windshield"]
+		[select* glass class:evag-form-control class:evag-glass-select first_as_label "Select glass type…"]
 	</label>
 </div>
 

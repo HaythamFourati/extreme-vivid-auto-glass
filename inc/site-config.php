@@ -53,14 +53,16 @@ function evag_config() {
 		),
 
 		'glass_options'  => array(
-			array( 'value' => 'Front windshield',              'code' => 'WS-01', 'label' => __( 'Front Windshield', 'evag' ) ),
-			array( 'value' => 'Driver / passenger door glass', 'code' => 'DR-02', 'label' => __( 'Door Glass', 'evag' ) ),
-			array( 'value' => 'Rear door glass',               'code' => 'RD-03', 'label' => __( 'Rear Door Glass', 'evag' ) ),
-			array( 'value' => 'Quarter / vent glass',          'code' => 'QV-04', 'label' => __( 'Quarter / Vent', 'evag' ) ),
-			array( 'value' => 'Back glass',                    'code' => 'BK-05', 'label' => __( 'Back Glass', 'evag' ) ),
-			array( 'value' => 'Stone chip',                    'code' => 'CH-06', 'label' => __( 'Stone Chip', 'evag' ) ),
-			array( 'value' => 'Leak',                          'code' => 'LK-07', 'label' => __( 'Leak / Seal', 'evag' ) ),
-			array( 'value' => 'ADAS windshield',               'code' => 'AD-08', 'label' => __( 'ADAS Windshield', 'evag' ) ),
+			array( 'value' => 'Front windshield',                  'code' => 'WS-01', 'label' => __( 'Front Windshield', 'evag' ) ),
+			array( 'value' => 'Front driver side door glass',     'code' => 'DR-02', 'label' => __( 'Front Driver Door', 'evag' ) ),
+			array( 'value' => 'Front passenger side door glass',  'code' => 'DR-03', 'label' => __( 'Front Passenger Door', 'evag' ) ),
+			array( 'value' => 'Rear driver side door glass',      'code' => 'DR-04', 'label' => __( 'Rear Driver Door', 'evag' ) ),
+			array( 'value' => 'Rear passenger side door glass',   'code' => 'DR-05', 'label' => __( 'Rear Passenger Door', 'evag' ) ),
+			array( 'value' => 'Quarter / vent glass',             'code' => 'QV-06', 'label' => __( 'Quarter / Vent', 'evag' ) ),
+			array( 'value' => 'Back glass',                       'code' => 'BK-07', 'label' => __( 'Back Glass', 'evag' ) ),
+			array( 'value' => 'Stone chip',                       'code' => 'CH-08', 'label' => __( 'Stone Chip', 'evag' ) ),
+			array( 'value' => 'Leak',                             'code' => 'LK-09', 'label' => __( 'Leak / Seal', 'evag' ) ),
+			array( 'value' => 'ADAS windshield',                  'code' => 'AD-10', 'label' => __( 'ADAS Windshield', 'evag' ) ),
 		),
 
 		'reviews'        => array(

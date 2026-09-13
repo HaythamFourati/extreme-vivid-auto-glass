@@ -21,7 +21,7 @@ $evag = evag_config();
 			<style>
 				@media (min-width: 1200px) {
 					[role="group"][aria-label*="glass"] {
-						grid-template-columns: repeat(8, 1fr) !important;
+						grid-template-columns: repeat(5, 1fr) !important;
 					}
 				}
 			</style>
@@ -34,7 +34,7 @@ $evag = evag_config();
 				        style="--reveal-delay:<?php echo (int) ( $i * 40 ); ?>ms;position:relative;text-align:left;background:#15171B;border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:18px 14px;min-height:88px;display:flex;align-items:flex-end;cursor:pointer;color:#fff">
 					<span data-active-frame hidden style="position:absolute;inset:0;border:2px solid #E01627;border-radius:4px;pointer-events:none"></span>
 					<span data-active-tick hidden aria-hidden="true" style="position:absolute;top:12px;right:12px;width:20px;height:20px;border-radius:50%;background:#E01627;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">✓</span>
-					<span style="font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:21px;line-height:1.04;text-transform:uppercase;color:#fff"><?php echo esc_html( $g['label'] ); ?></span>
+					<span style="font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:clamp(18px,1.5vw,21px);line-height:1.04;text-transform:uppercase;color:#fff;text-wrap:balance"><?php echo esc_html( $g['label'] ); ?></span>
 				</button>
 			<?php endforeach; ?>
 		</div>

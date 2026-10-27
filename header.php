@@ -95,7 +95,7 @@ $service_list = array(
 	array( 'Windshield Repair',          __( 'Resin chip and crack repair to stop damage from spreading.', 'evag' ) ),
 	array( 'Door Glass Replacement',     __( 'Door glass replacement with full debris cleanup.', 'evag' ) ),
 	array( 'Side Window Replacement',    __( 'Side and vent window replacement, mobile service.', 'evag' ) ),
-	array( 'Rear Windshield Replacement', __( 'Back glass and rear windshield replacement, including defroster-equipped glass.', 'evag' ) ),
+	array( 'Rear Back Glass Replacement', __( 'Rear back glass replacement, including defroster-equipped glass.', 'evag' ) ),
 	array( 'Stone Chip Repair',          __( 'Quick resin repair for highway rock chips.', 'evag' ) ),
 	array( 'Leaking Windshield Repair',  __( 'Diagnose and re-seal improperly bonded glass.', 'evag' ) ),
 	array( 'ADAS Recalibration',         __( 'Camera and sensor recalibration after windshield replacement.', 'evag' ) ),

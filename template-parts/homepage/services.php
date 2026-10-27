@@ -1,6 +1,6 @@
 <?php
 /**
- * Services grid — 9 cards, mix of real photography and pattern headers.
+ * Services grid, mix of real photography and pattern headers.
  *
  * @package evag
  */

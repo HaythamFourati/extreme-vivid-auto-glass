@@ -126,7 +126,7 @@ function initGlassSelector() {
 }
 
 /* ------------------------------------------------------------------
- * Contact-method picker (Email / Phone / Both) — hidden input + frame.
+ * Contact-method picker (Email / Phone / Text / Either) — hidden input + frame.
  * ----------------------------------------------------------------- */
 function initContactPicker() {
 	const buttons = Array.from( document.querySelectorAll( '[data-contact-select]' ) );

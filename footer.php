@@ -42,7 +42,7 @@ $evag = evag_config();
 				<li><a href="<?php echo esc_url( evag_service_url( 'windshield-repair' ) ); ?>" style="text-decoration:none"><?php esc_html_e( 'Windshield Repair', 'evag' ); ?></a></li>
 				<li><a href="<?php echo esc_url( evag_service_url( 'door-glass-replacement' ) ); ?>" style="text-decoration:none"><?php esc_html_e( 'Door & Side Glass', 'evag' ); ?></a></li>
 				<li><a href="<?php echo esc_url( evag_service_url( 'adas-recalibration' ) ); ?>" style="text-decoration:none"><?php esc_html_e( 'ADAS Recalibration', 'evag' ); ?></a></li>
-				<li><a href="<?php echo esc_url( evag_service_url( 'classic-luxury-glass' ) ); ?>" style="text-decoration:none"><?php esc_html_e( 'Classic & Luxury Glass', 'evag' ); ?></a></li>
+				<li><a href="<?php echo esc_url( evag_service_url( 'rear-windshield-replacement' ) ); ?>" style="text-decoration:none"><?php esc_html_e( 'Rear Back Glass', 'evag' ); ?></a></li>
 			</ul>
 		</div>
 

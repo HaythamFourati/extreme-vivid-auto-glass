@@ -23,7 +23,7 @@ above the fold on every device.
 ## Core services
 Windshield replacement · Windshield/chip repair · Door glass · Side window ·
 Back glass · Leaking windshield · ADAS recalibration · Commercial vehicle glass ·
-Classic & luxury auto glass.
+Model year 2000 and newer only.
 
 ## Proof we can stand behind (no fabrication)
 - Since 2003 (22+ years).

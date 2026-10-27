@@ -90,7 +90,7 @@ select tag here besides the placeholder is discarded.
 
 <div class="evag-contact-picker">
 	<span class="evag-form-label">Preferred contact method</span>
-	[hidden contact "both"]
+	[hidden contact "either"]
 	<div class="evag-contact-picker-options">
 		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="email" aria-pressed="false">
 			<span class="evag-contact-active-frame" data-active-frame hidden></span>
@@ -100,9 +100,13 @@ select tag here besides the placeholder is discarded.
 			<span class="evag-contact-active-frame" data-active-frame hidden></span>
 			Phone
 		</button>
-		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="both" aria-pressed="true">
+		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="text" aria-pressed="false">
+			<span class="evag-contact-active-frame" data-active-frame hidden></span>
+			Text
+		</button>
+		<button type="button" class="evag-contact-option" data-contact-select data-contact-value="either" aria-pressed="true">
 			<span class="evag-contact-active-frame" data-active-frame></span>
-			Both
+			Either/Or
 		</button>
 	</div>
 </div>
@@ -129,7 +133,8 @@ Quote request — [year] [make] [model]
 
 Additional headers:
 
-Leave blank. Email is optional in this form, so using it as a Reply-To header can
+Leave blank — no Cc: or Bcc: lines. Anything added here is copied on every
+quote email and shows up when replying. Email is optional in this form, so using it as a Reply-To header can
 produce an invalid empty header. The submitted email is included in the message.
 
 Message body:

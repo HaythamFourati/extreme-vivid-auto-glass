@@ -41,7 +41,7 @@ select tag here besides the placeholder is discarded.
 <div class="evag-form-grid evag-form-grid--vehicle">
 	<label class="evag-form-field">
 		<span class="evag-form-label">Vehicle year *</span>
-		[text* year class:evag-form-control autocomplete:off placeholder "2019"]
+		[text* vehicle-year class:evag-form-control autocomplete:off placeholder "2019"]
 	</label>
 	<label class="evag-form-field">
 		<span class="evag-form-label">Make *</span>
@@ -69,7 +69,7 @@ select tag here besides the placeholder is discarded.
 <div class="evag-form-grid evag-form-grid--two">
 	<label class="evag-form-field">
 		<span class="evag-form-label">Full name *</span>
-		[text* name class:evag-form-control autocomplete:name placeholder "Jane Driver"]
+		[text* customer-name class:evag-form-control autocomplete:name placeholder "Jane Driver"]
 	</label>
 	<label class="evag-form-field">
 		<span class="evag-form-label">Phone *</span>
@@ -129,22 +129,25 @@ From:
 [_site_title] <wordpress@[_site_domain]>
 
 Subject:
-Quote request — [year] [make] [model]
+Quote request — [vehicle-year] [make] [model]
 
 Additional headers:
 
-Leave blank — no Cc: or Bcc: lines. Anything added here is copied on every
-quote email and shows up when replying. Email is optional in this form, so using it as a Reply-To header can
-produce an invalid empty header. The submitted email is included in the message.
+Leave blank — no Reply-To:, Cc: or Bcc: lines. The theme adds
+"Reply-To: <customer email>" automatically when the customer gives an email
+(inc/contact-form-7.php), so hitting Reply goes to the customer instead of
+bouncing off wordpress@ev-autoglass.com. A Reply-To: [email] line here triggers
+"Invalid mailbox syntax" because the email field is optional. Anything added
+here is copied on every quote email and shows up when replying.
 
 Message body:
 New quote request from the website.
 
-Vehicle: [year] [make] [model]
+Vehicle: [vehicle-year] [make] [model]
 VIN: [vin]
 Glass: [glass]
 
-Name: [name]
+Name: [customer-name]
 Phone: [phone]
 Email: [email]
 ZIP: [zip]

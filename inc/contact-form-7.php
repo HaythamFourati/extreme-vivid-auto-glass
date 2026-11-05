@@ -83,3 +83,33 @@ function evag_populate_glass_options( $scanned_tag ) {
 	return $scanned_tag;
 }
 add_filter( 'wpcf7_form_tag', 'evag_populate_glass_options' );
+
+/**
+ * Reply to the customer, not the site's wordpress@ sender.
+ *
+ * A "Reply-To: [email]" line in the Mail tab trips Contact Form 7's
+ * "Invalid mailbox syntax" error because the email field is optional. Adding
+ * the header here, only when a valid address was submitted, keeps the field
+ * optional and the form free of configuration errors. Leave the Mail tab's
+ * Additional headers empty.
+ *
+ * @param array             $components Mail components.
+ * @param WPCF7_ContactForm $contact_form Contact form.
+ * @param WPCF7_Mail        $mail Mail template being sent.
+ * @return array
+ */
+function evag_quote_reply_to_customer( $components, $contact_form, $mail ) {
+	if ( EVAG_QUOTE_FORM_TITLE !== $contact_form->title() || 'mail' !== $mail->name() ) {
+		return $components;
+	}
+
+	$submission = WPCF7_Submission::get_instance();
+	$email      = $submission ? is_email( trim( (string) $submission->get_posted_data( 'email' ) ) ) : false;
+
+	if ( $email ) {
+		$components['additional_headers'] = trim( $components['additional_headers'] . "\nReply-To: " . $email );
+	}
+
+	return $components;
+}
+add_filter( 'wpcf7_mail_components', 'evag_quote_reply_to_customer', 10, 3 );
